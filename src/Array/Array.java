@@ -12,7 +12,6 @@ public class Array<E> {
         data = newData;
     }
 
-
     /**
      * 构造函数 传入容量capacity构造Array
      * @param capacity 容量
@@ -120,10 +119,18 @@ public class Array<E> {
             remove(index);
     }
 
+    public E getLast(){
+        return get(size-1);
+    }
+
+    public E getFirst(){
+        return get(0);
+    }
+
     @Override
     public String toString(){
         StringBuilder res = new StringBuilder();
-        res.append(String.format("Array: size = %d , capacity = %d\n",size, data.length));
+        res.append(String.format("Array: size = %d , capacity = %d\n", size, data.length));
         res.append("[");
         for(int i = 0; i < size ; i++){
             res.append(data[i]);
