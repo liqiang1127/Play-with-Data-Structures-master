@@ -2,8 +2,9 @@ package Array;
 
 public class Array<E> {
     private E[] data;
+    //当前data中元素的个数
     private int size;
-    //capacity使用data.length代替
+    //capacity使用data.length代替，代表容器的容量
     private void resize(int newCapacity){
         E[] newData = (E[])new Object[newCapacity];
         for (int i = 0; i < size; i++) {
@@ -45,6 +46,7 @@ public class Array<E> {
         //size是第一个空的位置
         if(index < 0 || index > size)
             throw new IllegalArgumentException("Add error");
+        //当前size是否已经等于capacity（容量）
         if(size == data.length)
             resize(2 * data.length);
         for(int i = size-1; i >= index; i--)
