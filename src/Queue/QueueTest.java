@@ -2,7 +2,8 @@ package Queue;
 
 public class QueueTest {
     public static void main(String[] args) {
-        ArrayQueue<Integer> queue = new ArrayQueue<Integer>();
+        //ArrayQueue<Integer> queue = new ArrayQueue<Integer>();
+        LoopQueue<Integer> queue = new LoopQueue<Integer>();
         for (int i = 0; i < 10; i++) {
             queue.enqueue(i);
             System.out.println(queue);

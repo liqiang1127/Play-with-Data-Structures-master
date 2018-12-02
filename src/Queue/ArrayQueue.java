@@ -13,13 +13,13 @@ public class ArrayQueue<E> implements Queue<E> {
         array = new Array<E>();
     }
 
-    //入队
+    //入队 O(1) 均摊复杂度
     @Override
     public void enqueue(E e) {
         array.addLast(e);
     }
 
-    //出队
+    //出队 O(n)
     @Override
     public E dequeue() {
          return array.removeFirst();
